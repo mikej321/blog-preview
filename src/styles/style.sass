@@ -1,0 +1,137 @@
+// variables
+
+// primary
+$yellow: hsl(47, 88%, 63%)
+
+// neutral
+$white: hsl(0, 0%, 100%)
+$grey: hsl(0, 0%, 50%)
+$black: hsl(0, 0%, 7%)
+
+// fonts
+$paragraph-font: 16px
+
+@font-face
+    font-family: 'Figtree 600'
+    src: url('../fonts/figtree_variable.ttf')
+    font-weight: 600
+    font-style: normal
+
+@font-face 
+    font-family: 'Figtree 800'
+    src: url('../fonts/figtree_variable.ttf')
+    font-weight: 800
+    font-style: normal
+
+
+*,
+*::before,
+*::after
+    box-sizing: border-box
+
+*
+    margin: 0
+    padding: 0
+    scroll-behavior: smooth
+
+html
+    font-size: 62.5%
+
+body
+    font-size: 1.6rem
+    background-color: $yellow
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+    align-items: center
+    justify-content: center
+    font-family: 'Figtree 600'
+
+
+img 
+    width: 100%
+    height: auto
+    object-fit: cover
+
+.card
+    background-color: $white
+    width: 100%
+    max-width: 32rem
+    padding: 2rem 2rem .5rem 2rem
+    border-radius: 1.8rem
+    border: 1px solid $black
+    display: grid
+    grid-template-areas: "hero" "main" "footer"
+    gap: 2rem
+    box-shadow: 10px 10px $black
+
+.heroImg
+    height: 20.1rem
+    max-width: 28rem
+    border-radius: 1.2rem
+    border: none
+    grid-area: hero
+
+main
+    grid-area: main
+    display: grid
+    grid-template-areas: "tag" "date" "title" "description" "avatar"
+    row-gap: 2rem
+
+.sectionTag
+    padding: .7rem 1rem
+    font-size: 1.2rem
+    font-family: 'Figtree 800'
+    background-color: $yellow
+    max-width: 7.5rem
+    text-align: center
+    border-radius: 4px
+    grid-area: tag
+
+.publish_date
+    grid-area: date
+    font-size: 1.2rem
+    font-color: $black
+
+.title
+    grid-area: title
+    font-size: 1.9rem
+    font-family: 'Figtree 800'
+    cursor: pointer
+    transition: color 0.2s ease-in-out
+    &:hover
+        color: $yellow
+
+.description
+    grid-area: description
+    font-size: 1.3rem
+    color: $grey
+    line-height: 2rem
+
+.avatarInfo
+    grid-area: avatar
+    display: flex
+    align-items: center
+    gap: 1.2rem
+    .avatarPic
+        max-width: 3rem
+    .avatarName
+        font-family: 'Figtree 800'
+        font-size: 1.4rem
+        
+
+footer
+    grid-area: footer
+    position: fixed
+    bottom: 1rem
+
+.attribution
+    font-size: 1.6rem
+
+@media screen and (min-width: 600px)
+    .card
+        max-width: 38rem
+
+    .heroImg
+        max-width: 34rem
+    
