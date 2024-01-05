@@ -9,6 +9,7 @@ function createHeroImg() {
 
     const heroImg = new Image();
     heroImg.src = Hero;
+    heroImg.alt = 'The hero image for the card';
     heroImg.classList.add('heroImg');
     header.append(heroImg);
 }
@@ -42,6 +43,7 @@ function createMainInfo() {
 
     const avatarPic = new Image();
     avatarPic.src = Avatar;
+    avatarPic.alt = 'The user\'s avatar pic';
     avatarPic.classList.add('avatarPic');
     avatarInfo.append(avatarPic);
 
